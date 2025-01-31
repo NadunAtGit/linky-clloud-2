@@ -63,7 +63,8 @@ const Home = () => {
         if (response.data?.linkTreeUrl) {
             toast.success('LinkTree generated successfully!');
             // Redirect to the generated LinkTree URL
-           
+            getUserInfo();
+            // navigate(`/linktree/${response.data.linkTreeUrl.split('/').pop()}`);
         }
     } catch (error) {
         console.error('Error generating LinkTree:', error.message);
